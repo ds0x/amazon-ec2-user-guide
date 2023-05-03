@@ -49,9 +49,8 @@ Do not use FileVault\. If data\-at\-rest and data\-in\-transit is required, use 
 
 ## Instance readiness<a name="mac-instance-readiness"></a>
 
-After you launch a Mac instance, you'll need to wait till the instance is ready before you can connect to it\. The approximate times you might wait are as follows:
-+ x86 Mac instances – up to 15 minutes from launch
-+ M1 Mac instances – up to 40 minutes from launch
+After you launch a Mac instance, you'll need to wait till the instance is ready before you can connect to it\. The approximate launch time for an EC2 Mac instance is approximately 6 minutes. 
+- **If you've added additional scripts to user data or loaded software on a customer created AMI, the launch time may increase.**
 
 You can use a small shell script, like the one below, to poll the describe\-instance\-status API to know when the instance is ready to be connected to\. In the following command, replace the example instance ID with your own\.
 
@@ -106,7 +105,7 @@ You can launch a Mac instance using the AWS Management Console or the AWS CLI\.
 
    1. A confirmation page lets you know that your instance is launching\. Choose **View all instances** to close the confirmation page and return to the console\. The initial state of an instance is `pending`\. The instance is ready when its state changes to `running` and it passes status checks\.
 **Note**  
-Mac instances can take up to 15\-40 minutes to be ready\. For more information, see [Instance readiness](#mac-instance-readiness)\.
+Mac instances take an average of 6 minutes to be ready\. For more information, see [Instance readiness](#mac-instance-readiness)\.
 
 ### Launch a Mac instance using the AWS CLI<a name="mac-instance-launch-cli"></a>
 
@@ -168,14 +167,14 @@ The following is example output for an instance that is running and has passed s
 ```
 
 **Note**  
-Mac instances can take up to 15\-40 minutes to be ready\. For more information, see [Instance readiness](#mac-instance-readiness)\.
+Mac instances take an average of 6 minutes to be ready\. For more information, see [Instance readiness](#mac-instance-readiness)\.
 
 ## Connect to your Mac instance<a name="connect-to-mac-instance"></a>
 
 You can connect to your Mac instance using SSH or Apple Remote Desktop \(ARD\)\.
 
 **Note**  
-After you launch a Mac instance, it can take up to 15\-40 minutes to be ready before you can connect to it\. For more information, see [Instance readiness](#mac-instance-readiness)\.
+Mac instances take an average of 6 minutes to be ready for a connection\. For more information, see [Instance readiness](#mac-instance-readiness)\.
 
 ### Connect to your instance using SSH<a name="mac-instance-ssh"></a>
 
